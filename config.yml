@@ -50,6 +50,10 @@ stats: a727f6a7-8fc5-4b55-88c5-3c035821e1cb
 online_mode: false
 forge_support: true
 disabled_commands: []
+listeners[0]:
+  host: $public_address:$proxy_port
+  query_enabled: true
+  query_port: $proxy_query
 servers:
   hub:
     address: $local_address:$server_hub_port
