@@ -1,0 +1,139 @@
+##########################################
+##                                      ##
+##      Bungee Chat Filter Config       ##
+##                 v1.7                 ##
+##########################################
+
+#Monitor commands - Monitor commands send by the players as chat
+Monitor Commands: true
+
+#Commands - The list of commands that the plugin will monitor
+Commands:
+    - url
+    - website
+    - site
+    - map
+    - dynmap
+    - wiki
+    - kill
+    - start
+    - pl
+    - plugins
+#AntiSpam - Will use the minimum chat delay to force players to wait *1500ms or what ever you specified between messages
+AntiSpam: true
+AntiRepeat: true
+#Minimum-Chat-Delay - The time in miliseconds a player must wait between messages
+Minimum-Chat-Delay: 500
+Minimum-Repeat-Delay: 5000
+#Messages sent to the player in chat when they are blocked by AntiSpam or AntiRepeat
+AntiSpamMessage: &cAttention à ne pas spammer le chat
+AntiRepeatMessage: &cAttention à ne pas spammer le chat
+
+#Rules - Groups of rules which monitor the chat
+#rules:
+#   rulename:                       - the name of the rule.
+#       regex:                      - the string regex that the rule will check for.
+#       ignores:                    - If the message contains a value that matches ignore then none of the actions will be performed.
+#       permission:                 - the permission required to bypass this rule.
+#       actions:                    - here is the list of actions the rule will perform if matched.
+#           deny: true              - this will deny the message and cancel the event.
+#           message: <message>      - this will send a message <message to the player. (Supports Placeholders, see below)
+#           kick: <message>         - this will kick the player with the <message>. (Supports Placeholders, see below)
+#           alert: <message>        - this will send the <message> to all players connected to the proxy server. (Supports Placeholders, see below)
+#           remove: true            - this will remove any matches from the player's message.
+#           replace:                - this will replace the matched word with a random word from the list below. (Supports Placeholders, see below)
+#               - word1
+#               - word2
+#           lower: true             - this will change any matches into lowercase.
+#           pcommand: (command)     - Proxy command, this will cause the player to send the (command) to the proxy server. Do not include a /. (Supports Placeholders, see below)
+#           scommand: /(command)    - Server command this will cause the player to send the (command) to their current server. You must include a /. (Supports Placeholders, see below)
+#           ccommand: (command)     - Console command, this will cause the proxy server console to execute the (command). Do not include a /. (Supports Placeholders, see below)
+#                                      Note that there is currently no way to execute a command as the current server console.
+
+#Placeholders                       - These placeholders can be used in any action strings.
+#
+# {player}                          - Replaced with the display name of the player sending the message
+# {message}                         - Replaced with the original message as sent by the player
+# {arguments}                       - Intended for use with commands, this will be replaced by all of the arguments following the first word of the player's message.
+#                                       (for example a player sending "/send Zedwick Hello!" will return "Zedwick Hello!" in place of {arguments})
+
+rules:
+#when a player asks for op they will instead say one of the following from the list and be sent a message
+    # lag:
+        # regex: (^.*)(?i)(\b(l|i|1|\*)+[^A-Za-z0-9\u00C0-\u00FF]*(a|4|\*)+[^A-Za-z0-9\u00C0-\u00FF]*g+[^A-Za-z0-9\u00C0-\u00FF]*)
+        # ignores: (?i)(pa|pas|a peine)
+        # actions:
+            # replace:
+                # - Il fonctionne vraiment bien ce serveur!
+                # - Aucun lag
+                # - "Belle machine :3"
+                # - C'est tellement fluide!
+
+#When the player uses 4 or more letters in a row all in caps lock then the message will be changed to lowercase
+    CAPSPAM:
+        regex: (\p{Lu}|\s){10,}
+        actions:
+            lower: true
+
+#Removes magic, bold and italics from the players chat when they dont have the bungeefilter.antiformatbypass permission.
+    AntiFormatText:
+        regex: '&[k-o]'
+        permission: bungeefilter.antiformatbypass
+        actions:
+            remove: true
+            message: '&cLe formatage en chat est interdit'
+
+
+#Removes color from the chat unless the player has the bungeefilter.colorbypass permission
+    AntiColorText:
+        regex: "&[0-9 a-f]"
+        permission: bungeefilter.colorbypass
+        actions:
+            remove: true
+            message: '&cLa couleur en chat est reservé aux membres &6Premium'
+
+#Assumes all IP addresses are advertising and all URLs that do not include this server's name are advertising
+    AntiAdvertising:
+        regex: (^.*([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}).*$)|(^.*((mc|play)\.(.*)\.(com|net))|((.+)\.(.*(mine|craft).*)\.(com|net)).*$)
+        ignores: (^.*breakerland.fr)
+        actions:
+            kick: '&cLa publicité est interdite.'
+            deny: true
+
+    plus_one:
+        regex: (^\+1$)
+        permission: "!bungeefilter.plus_one"
+        actions:
+            pcommand: server event
+
+#Shortcut for website URL can use either /url or /website
+    site:
+        regex: (^/(url|website|site)$)
+        actions:
+            message: "&l&6[Site internet] &6www.breakerland.fr"
+            deny: true
+    plugins:
+        regex: (^/(pl|plugins)$)
+        actions:
+            message: "&7Tu souhaites connaître la liste de nos plugins ? Regardes plutot sur https://github.com/Breakerland/Breakerland afin de contribuer à faire évoluer le serveur !"
+            deny: true
+    wiki:
+        regex: (^/wiki$)
+        actions:
+            message: "&l&6[Wiki] &6www.breakerland.fr/wiki"
+            deny: true
+
+#Shortcut for website URL can use either /url or /website
+    start:
+        regex: (^/start$)
+        actions:
+            alert: "&f[&6Event&f] &6Faites &l+1 &6pour rejoindre l'event!"
+            scommand: "lpb group default permission settemp bungeefilter.plus_one 5m"
+            deny: true
+
+#Shortcut for website URL can use either /url or /website
+    map:
+        regex: (^/(map|dynmap)$)
+        actions:
+            message: "&l&6[Dynmap] &6https://map.breakerland.fr"
+            deny: true

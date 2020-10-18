@@ -1,0 +1,111 @@
+# Comments are gone because update :(. Click here for new config + comments: https://www.spigotmc.org/resources/anti-vpn-bungee.58716/
+
+sources:
+  order:
+  - iphub
+  - proxycheck
+  iphub:
+    enabled: true
+    key: $antivpn_iphub
+    block: 1
+  proxycheck:
+    enabled: true
+    key: $antivpn_proxycheck
+  iphunter:
+    enabled: false
+    key: ''
+    block: 1
+  getipintel:
+    enabled: false
+    contact: admin@yoursite.com
+    threshold: 0.98
+  ipqualityscore:
+    enabled: false
+    key: ''
+    threshold: 0.98
+    proxy: false
+    mobile: true
+    strictness: 0
+    recent-abuse: true
+  vpnblocker:
+    enabled: false
+    key: ''
+  ip2proxy:
+    enabled: false
+    key: P4C5WEVEO4
+  teoh:
+    enabled: false
+  shodan:
+    enabled: false
+    key: ''
+  ipwarner:
+    enabled: false
+    key: ''
+  cache-time: 6hours
+action:
+  ignore:
+  - 127.0.0.1
+  - 172.18.0.1
+  - ::1
+  vpn:
+    kick-message: '&cVPN interdit! Veuillez le désactiver ou vous serez banni.'
+    commands:
+    - warn %player% vpn
+    algorithm:
+      method: consensus
+      min-consensus: 0.4
+  mcleaks:
+    kick-message: '&cVous utilisez un compte piraté! Si vous êtes le propriétaire
+      du compte, rendez-vous sur Minecraft.net pour sécuriser votre compte.'
+    commands:
+    - ''
+debug: false
+stats:
+  usage: true
+  errors: true
+update:
+  check: false
+  notify: false
+version: 4.12
+storage:
+  engines:
+    mysql:
+      enabled: true
+      connection:
+        address: $mysql_host:$mysql_port
+        database: $mysql_database_proxy
+        prefix: antivpn_
+        username: $mysql_user_proxy
+        password: $mysql_password_proxy
+        options: useSSL=true&useUnicode=true&characterEncoding=utf8
+    redis:
+      enabled: false
+    sqlite:
+      enabled: false
+  settings:
+    max-pool-size: 2
+    min-idle: 2
+    max-lifetime: 1800000
+    timeout: 2000
+  order:
+  - mysql
+messaging:
+  engines:
+    redis:
+      enabled: false
+    rabbitmq:
+      enabled: false
+  settings:
+    max-pool-size: 4
+    min-idle: 4
+    max-lifetime: 1800000
+    timeout: 5000
+  order: []
+connection:
+  cache-time: 1minute
+  threads: 4
+  timeout: 5000
+mcleaks:
+  cache-time: 1day
+  key: ''
+lang: fr

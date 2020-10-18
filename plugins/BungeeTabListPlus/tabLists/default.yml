@@ -1,0 +1,103 @@
+
+
+# Custom placeholders are a powerful mechanism to add more dynamic content
+# to the tab list.
+# See https://github.com/CodeCrafter47/BungeeTabListPlus/wiki/CustomPlaceholders
+customPlaceholders:
+  # Defines the ${afk_tag} placeholder which is used to add "|away"
+  # to the players name if he is afk.
+  afk_tag:
+    !conditional
+    condition: ${player essentials_afk}
+    true: "&4&lAFK"
+    false: ""
+  other_server_prefix:
+    !conditional
+    condition: '${viewer server} == ${player server}'
+    true: ''
+    false: '&7'
+  viewer_colored_ping0:
+    !conditional
+    condition: "${viewer ping} < 50"
+    true: "&a${viewer ping}"
+    false: "&e${viewer ping}"
+  viewer_colored_ping:
+    !conditional
+    condition: "${viewer ping} < 150"
+    true: ${viewer_colored_ping0}
+    false: "&c${viewer ping}"
+  viewer_colored_tps1:
+    !conditional
+    condition: "${viewer server tps} > 18"
+    true: "&a${viewer server tps 1.0}"
+    false: "&e${viewer server tps 1.0}"
+  viewer_colored_tps0:
+    !conditional
+    condition: "${viewer server tps} > 12"
+    true: ${viewer_colored_tps1}
+    false: "&c${viewer server tps 1.0}"
+  viewer_colored_tps:
+    !conditional
+    condition: "${viewer server tps} > 20"
+    true: "&a20"
+    false: "${viewer_colored_tps0}"
+  donation_bar:
+    !progress_bar
+    value: 10
+    maxValue: 65
+    style: largediv
+    length: 13
+    textCenter: "${progress_value}€"
+    colorCurrent: "&8"
+  server_display_name:
+    !switch
+    parameters: 1
+    expression: "${%0}"
+    replacements:
+      "creatif": "Créatif"
+      "survie": "Survie"
+      "archi": "Architecte"
+      "hub": "Lobby"
+      "dev": "Développement"
+      "event": "Event"
+    defaultReplacement: "${%0}"
+
+showTo: "all"
+priority: 0
+
+playerSets:
+  all_players: # A player set containing all players
+    filter: "true"
+    hiddenPlayers: "VISIBLE" # Hidden players show up on the tab list, avoids glitches
+
+# A simple header and footer
+showHeaderFooter: true
+# header:
+  # - "&4&l&nBreakerLand"
+header:
+- |-
+  &7&l&m------&7&l[ &6&lBreakerland &7&l]&m------
+  &7En ligne: &e${playerset:all_players size}&7/50
+  &7Ping: ${viewer_colored_ping}&7ms | TPS: ${viewer_colored_tps}&7/20
+headerAnimationUpdateInterval: 0.2
+footer: # The footer text:
+- |-
+  &7Boost donation:
+  &r${donation_bar}
+  &7&l&m------&7&l[ &6&l${server_display_name viewer server} &7&l]&m------
+footerAnimationUpdateInterval: 0.5 # Ignore this, there's no animation
+
+# We want a dynamic size tab list
+type: DYNAMIC_SIZE
+
+# Below are the options specific to the dynamic size tab list
+
+# Here you can configure which players to display by specifying a player set.
+# For this example we are using the `all_players` player set created above.
+playerSet: all_players
+
+# Here the order of the players can be configured.
+playerOrder: "vault_primary_group_weight asc"
+
+# This option controls the format of the players names.
+playerComponent: "${other_server_prefix}${player display_name} ${afk_tag}"

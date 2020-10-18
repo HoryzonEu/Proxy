@@ -1,0 +1,41 @@
+# Bungee Admin Tools - Configuration file
+
+language: fr
+prefix: '&6[&4Staff&6]&e '
+# Force players to give reason when /ban /unban /kick /mute /unmute etc.
+mustGiveReason: true
+# Enable /bat confirm, to confirm command such as action on unknown player.
+confirmCommand: false
+# Enable or disable simple aliases to bypass the /bat prefix for core commands
+simpleAliasesCommands:
+  confirm: false
+  help: false
+  lookup: false
+  backup: false
+  reload: false
+  import: false
+  migrateToMysql: false
+  stafflookup: false
+  modules: false
+# Make the date more readable.If the date correspond to today, tmw or yda, it will replace the date by the corresponding word
+litteralDate: false
+# Enable BETA (experimental) Redis support, requires RedisBungee
+redisSupport: false
+# The debug mode enables verbose logging. All the logged message will be in the debug.log file in BAT folder
+debugMode: false
+mysql:
+  # Set to true to use MySQL. Otherwise SQL Lite will be used
+  enabled: true
+  user: $mysql_user_proxy
+  password: $mysql_password_proxy
+  database: $mysql_database_proxy
+  host: $mysql_host
+  # If you don't know it, just leave it like this (3306 = default mysql port)
+  port: '$mysql_port'
+discord:
+  # Enable BETA (experimental) Discord bot supporte
+  enabled: false
+  # Discord token bot
+  token: ''
+  # Discord prefix
+  prefix: '!'

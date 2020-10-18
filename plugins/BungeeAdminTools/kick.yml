@@ -1,0 +1,6 @@
+# BungeeAdminTools - kick configuration file
+
+enabled: true
+commands:
+  kick: true
+  lkick: true

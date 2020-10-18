@@ -1,0 +1,16 @@
+# BungeeAdminTools - ban configuration file
+
+enabled: true
+commands:
+  ltempban: true
+  lban: true
+  unban: true
+  tempbanip: true
+  banip: true
+  lbanip: true
+  gunban: true
+  tempban: true
+  ltempbanip: true
+  unbanip: true
+  ban: true
+  gunbanip: true

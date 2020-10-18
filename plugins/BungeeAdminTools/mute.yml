@@ -1,0 +1,35 @@
+# BungeeAdminTools - mute configuration file
+
+enabled: true
+commands:
+  lmute: true
+  ltempmute: true
+  ltempmuteip: true
+  lmuteip: true
+  tempmute: true
+  muteip: true
+  unmuteip: true
+  lunmute: true
+  lunmuteip: true
+  mute: true
+  unmute: true
+  tempmuteip: true
+# Forbidden commands when a player is mute
+forbiddenCmds:
+- msg
+- m
+- w
+- whisper
+- me
+- tell
+- t
+- global
+- g
+- reply
+- r
+- bienvenue
+- welcome
+- bvn
+- breakerlandplugin:bvn
+- breakerlandplugin:bienvenue
+- breakerlandplugin:welcome

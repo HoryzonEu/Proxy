@@ -1,0 +1,158 @@
+# BungeeAdminTools - comment configuration file
+
+enabled: true
+commands:
+  warn: true
+  clearcomment: true
+  comment: true
+# Triggers list
+# Trigger name:
+#   pattern: reason which must be provided to trigger this
+#   commands: list of commands that should be executed when it triggers, you can use {player} variable
+#   triggerNumber: the number at which this triggers
+triggers:
+  cheat:
+    triggerNumber: 1
+    pattern:
+    - cheat
+    - antiafk
+    - anti-afk
+    - dupli
+    - duppli
+    - dupplication
+    - afk
+    - fly
+    - x-ray
+    - xray
+    - nuke
+    - forcefield
+    - no-fall
+    - nofall
+    - autoclick
+    - auto-click
+    - automine
+    - auto-mine
+    - autofish
+    - auto-fish
+    commands:
+    - alert {player} est emprisonné(e) 6h pour {reason}
+    - s:jail {player} 1 6h
+  constru:
+    triggerNumber: 1
+    pattern:
+    - obsene
+    - construction
+    commands:
+    - alert {player} est emprisonné(e) 5 jours pour {reason}
+    - s:jail {player} 1 5d
+  constru2:
+    triggerNumber: 2
+    pattern:
+    - obsene
+    - construction
+    commands:
+    - alert {player} est banni(e) pour {reason}
+    - ban {player} {reason}
+  vpn:
+    triggerNumber: 3
+    pattern:
+    - vpn
+    commands:
+    - ban {player} &cL'utilisation de VPN est interdite sur le serveur!
+  farm3:
+    triggerNumber: 3
+    pattern:
+    - farm
+    - job
+    - metier
+    commands:
+    - alert {player} est banni(e) pour {reason}
+    - ban {player} {reason}
+  cheat2:
+    triggerNumber: 2
+    pattern:
+    - cheat
+    - antiafk
+    - anti-afk
+    - dupli
+    - duppli
+    - dupplication
+    - afk
+    - fly
+    - x-ray
+    - xray
+    - nuke
+    - forcefield
+    - no-fall
+    - nofall
+    - autoclick
+    - auto-click
+    - automine
+    - auto-mine
+    - autofish
+    - auto-fish
+    commands:
+    - alert {player} est banni(e) pour {reason}
+    - ban {player} {reason}
+  farm2:
+    triggerNumber: 2
+    pattern:
+    - farm
+    - job
+    - usebug
+    - metier
+    commands:
+    - alert {player} est emprisonné(e) 7 jours pour {reason}
+    - s:jail {player} 1 7d {reason}
+    - s:eco set {player} 0
+    - s:jobs editpoints set {player} 0
+  insulte:
+    triggerNumber: 2
+    pattern:
+    - insulte
+    - spam
+    - pub
+    - insultes
+    - vulgarité
+    - vulgaire
+    commands:
+    - alert {player} est mute 1h pour {reason}
+    - tempmute {player} 1h {reason}
+  grief2:
+    triggerNumber: 2
+    pattern:
+    - grief
+    - vol
+    commands:
+    - alert {player} est emprisonné(e) 3 jours pour {reason}
+    - s:jail {player} 1 3d
+  farm:
+    triggerNumber: 1
+    pattern:
+    - farm
+    - job
+    - metier
+    - usebug
+    commands:
+    - alert {player} est emprisonné(e) 3 jours pour {reason}
+    - s:jail {player} 1 3d
+    - s:eco set {player} 0
+    - s:jobs editpoints set {player} 0
+  grief3:
+    triggerNumber: 3
+    pattern:
+    - grief
+    - vol
+    commands:
+    - alert {player} est banni(e) jours pour {reason}
+    - ban {player} {reason}
+  grief:
+    triggerNumber: 1
+    pattern:
+    - grief
+    - vol
+    commands:
+    - alert {player} est emprisonné(e) 1 jour pour {reason}
+    - s:jail {player} 1 1d
+# Interval in seconds between two comments on the same player
+cooldown: 10

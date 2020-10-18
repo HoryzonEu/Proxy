@@ -1,0 +1,30 @@
+# Debug level
+debug: ALL
+
+# Server name on which cracked players are redirected for register/login them.
+authServer: auth
+
+# Backend Configuration
+backend:
+  # Driver for MySQL (com.mysql.jdbc.Driver) or MariaDB (org.mariadb.jdbc.Driver)
+  driver: 'com.mysql.jdbc.Driver'
+  # Database host address
+  host: '$local_address'
+  # Database port
+  port: '$mysql_port'
+  # Username about Database Connection Infos
+  user: $mysql_user_proxy
+  # Password about Database Connection Infos
+  password: $mysql_password_proxy
+  # Database Name, use with converters or as SQLITE database name
+  database: $mysql_database_proxy
+  # Table name
+  table: PremiumConnector
+  # If connection should use SSL
+  useSSL: true
+  
+# Allow cracked player to use premium username
+secondAttempt: true
+
+# Time to confirm /premium command
+timeToConfirm: 30

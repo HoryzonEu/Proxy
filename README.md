@@ -14,10 +14,28 @@ Cependant tous les fichiers de configuration restent disponible à la modificati
 ### Propriétés serveur
 Pour les propriétés serveur, veuillez utiliser les variables suivantes :
 ```bash
-Server name: '$server_name'
-Server ip: '$server_ip'
-Server port: '$server_port'
-Query port: '$query_port'
+Public address: '$public_address'
+Local address: '$local_address'
+
+Proxy port: '$proxy_port'
+Proxy query: '$proxy_query'
+
+Hub server port: '$server_hub_port'
+Auth server port: '$server_auth_port'
+Survie server port: '$server_survie_port'
+Creatif server port: '$server_creatif_port'
+Event server port: '$server_event_port'
+Archi server port: '$server_archi_port'
+Dev server port: '$server_dev_port'
+```
+
+### Votifier
+Pour les informations de connexion avec Votifier :
+```bash
+Port: '$votifier_port'
+Token: '$votifier_token'
+Private key: '$votifier_key_private'
+Public key: '$votifier_key_public'
 ```
 
 ### Base de donnée
@@ -33,4 +51,17 @@ Pour les identifiants de connexion pour les données communes à différents ser
 User: '$mysql_user_proxy'
 Password: '$mysql_password_proxy'
 Database: '$mysql_database_proxy'
+```
+
+### Bot Discord
+Pour les identifiants du Bot Discord BreakerBot, veuillez utiliser les variables suivantes :
+```bash
+Invite: '$discord_invite'
+```
+
+### AntiVPN
+Les tokens de services anti-vpn :
+```bash
+IpHub: '$antivpn_iphub'
+ProxyCheck: '$antivpn_proxycheck'
 ```
