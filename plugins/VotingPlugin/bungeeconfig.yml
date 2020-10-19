@@ -3,7 +3,7 @@
 #
 # MYSQL Required on all setups
 # MYSQL INFO --------------------------
-Host: '$public_address'
+Host: '$local_address'
 # Default port is 3306
 Port: $mysql_port 
 Database: '$mysql_database_proxy'
