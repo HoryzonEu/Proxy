@@ -5,11 +5,11 @@
 |      AuthMeBungee      |          2.2.0        | https://www.spigotmc.org/resources/authmebungee.50219/ |
 |     AutoReconnect      |           1.6         | https://www.spigotmc.org/resources/autoreconnect-bungeecord-reconnect.62729/ |
 |    BungeeAdminTool     |          1.4.4        | https://www.spigotmc.org/resources/bungee-admin-tools-basics-edition.444/ |
-|      BungeeChat        |          2.2.3        | https://www.spigotmc.org/resources/bungee-chat.12592 |
+|      BungeeChat        |          2.2.4        | https://www.spigotmc.org/resources/bungee-chat.12592 |
 |   BungeeChatFilter     |           1.8         | https://www.spigotmc.org/resources/bungeechatfilter.20596/ |
 |   BungeeTabListPlus    |          3.4.0        | https://www.spigotmc.org/resources/bungeetablistplus.313/ |
-|        Geyser          |           1.0         | https://ci.nukkitx.com/job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/bungeecord/target/Geyser-BungeeCord.jar |
-|   LuckPerms-Bungee     |          5.1.79       | https://ci.lucko.me/job/LuckPerms/1173/artifact/bungee/build/libs/LuckPerms-Bungee-5.1.79.jar |
+|        Geyser          |           1.0         | https://ci.nukkitx.com/job/GeyserMC/job/Geyser/job/master/ |
+|   LuckPerms-Bungee     |          5.2.4       | https://ci.lucko.me/job/LuckPerms/ |
 |       NuVotifier       |          2.7.1        | https://www.spigotmc.org/resources/nuvotifier.13449/ |
 |   PremiumConnector     |          2.2.1        | https://www.spigotmc.org/resources/premiumconnector-bungeecord.20957/ |
 |      RedirectPlus      |          2.8.0        | https://www.spigotmc.org/resources/redirect-plus.51975/ |
