@@ -15,7 +15,7 @@ Cependant tous les fichiers de configuration restent disponible à la modificati
 Pour les propriétés serveur, veuillez utiliser les variables suivantes :
 ```bash
 Public address: '$public_address'
-Public address remote 02: '$public_address_02'
+Remote address remote 02: '$remote_address_02'
 Local address: '$local_address'
 
 Proxy port: '$proxy_port'

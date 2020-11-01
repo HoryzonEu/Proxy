@@ -10,6 +10,7 @@ listeners:
     mc.breakerland.fr: survie
     mc.horyzon.eu: hub
     tcf.horyzon.eu: tcf
+    atonium.horyzon.eu: atonium
     survie.breakerland.fr: survie
   host: $public_address:$proxy_port
   max_players: 60
@@ -81,6 +82,10 @@ servers:
     motd: '&7──── Bienvenue sur &3&lBreakerland Dev &7! ────'
     restricted: true
   tcf:
-    address: $public_address_02:$server_port_tcf
+    address: $remote_address_02:$server_port_tcf
     motd: '&7──── Bienvenue sur &3&lHoryzon TCF &7! ────'
+    restricted: true
+  atonium:
+    address: $remote_address_02:$server_port_atonium
+    motd: '&7──── Bienvenue sur &3&lAtonium &7! ────'
     restricted: true
