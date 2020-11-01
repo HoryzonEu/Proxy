@@ -64,7 +64,7 @@ customPlaceholders:
       "xyloria": "Xyloria"
     defaultReplacement: "${%0}"
 
-showTo: "all"
+showTo: ${viewer server} = "skyblock"
 priority: 0
 
 playerSets:
@@ -74,11 +74,9 @@ playerSets:
 
 # A simple header and footer
 showHeaderFooter: true
-# header:
-  # - "&4&l&nBreakerLand"
 header:
 - |-
-  &7&l&m------&7&l[ &6&lBreakerland &7&l]&m------
+  &7&l&m------&7&l[  &6&lAtonium  &7&l]&m------
   &7En ligne: &e${playerset:all_players size}&7/50
   &7Ping: ${viewer_colored_ping}&7ms | TPS: ${viewer_colored_tps}&7/20
 headerAnimationUpdateInterval: 0.2
