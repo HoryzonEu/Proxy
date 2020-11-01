@@ -2,7 +2,6 @@
 | :--------------------: | :-------------------: | :------------------------------------------------------------------------------------------------: |
 |        AntiBot         |          0.6.4        | https://www.spigotmc.org/resources/2ls-antibot-the-ultimate-antibot-plugin.62847/ |
 |        AntiVPN         |         5.11.37       | https://www.spigotmc.org/resources/anti-vpn-bungee.58716/ |
-|      AuthMeBungee      |          2.2.0        | https://www.spigotmc.org/resources/authmebungee.50219/ |
 |     AutoReconnect      |           1.6         | https://www.spigotmc.org/resources/autoreconnect-bungeecord-reconnect.62729/ |
 |    BungeeAdminTool     |          1.4.4        | https://www.spigotmc.org/resources/bungee-admin-tools-basics-edition.444/ |
 |      BungeeChat        |          2.2.4        | https://www.spigotmc.org/resources/bungee-chat.12592 |
