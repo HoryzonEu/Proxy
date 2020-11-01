@@ -18,7 +18,7 @@ listeners:
   host: $public_address:$proxy_port
   max_players: 60
   motd: '&7───── Bienvenue sur &3&lBreakerland &7! ─────    &2│ &61.16 &2│ $ &2│ &cGrades &2│ &fLands &2│ &cMétiers &2│ &fPets &2│'
-  ping_passthrough: false
+  ping_passthrough: true
   priorities:
   - survie
   - creatif
