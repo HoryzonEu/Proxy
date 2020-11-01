@@ -9,6 +9,7 @@ listeners:
     dev.breakerland.fr: dev
     mc.breakerland.fr: survie
     mc.horyzon.eu: hub
+    tcf.horyzon.eu: tcf
     survie.breakerland.fr: survie
   host: $public_address:$proxy_port
   max_players: 60
@@ -78,4 +79,8 @@ servers:
   dev:
     address: $local_address:$server_port_dev
     motd: '&7──── Bienvenue sur &3&lBreakerland Dev &7! ────'
+    restricted: true
+  tcf:
+    address: $public_address_02:$server_port_tcf
+    motd: '&7──── Bienvenue sur &3&lHoryzon TCF &7! ────'
     restricted: true
