@@ -10,7 +10,10 @@ listeners:
     mc.breakerland.fr: survie
     mc.horyzon.eu: hub
     tcf.horyzon.eu: tcf
-    atonium.horyzon.eu: atonium
+    xyloria.horyzon.eu: xyloria
+    atonium.horyzon.eu: skyblock
+    sky.horyzon.eu: skyblock
+    sky.breakerland.fr: skyblock
     survie.breakerland.fr: survie
   host: $public_address:$proxy_port
   max_players: 60
@@ -85,7 +88,11 @@ servers:
     address: $remote_address_02:$server_port_tcf
     motd: '&7──── Bienvenue sur &3&lHoryzon TCF &7! ────'
     restricted: true
-  atonium:
-    address: $remote_address_02:$server_port_atonium
+  skyblock:
+    address: $remote_address_02:$server_port_skyblock
     motd: '&7──── Bienvenue sur &3&lAtonium &7! ────'
+    restricted: false
+  xyloria:
+    address: $remote_address_02:$server_port_xyloria
+    motd: '&7──── Bienvenue sur &3&lXyloria &7! ────'
     restricted: true
