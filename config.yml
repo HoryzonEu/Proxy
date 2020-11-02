@@ -4,11 +4,13 @@ listeners:
   force_default_server: false
   forced_hosts:
     archi.breakerland.fr: archi
+    archi.horyzon.eu: archi
     breakerland.fr: survie
-    crea.breakerland.fr: creatif
-    dev.breakerland.fr: dev
     mc.breakerland.fr: survie
     mc.horyzon.eu: hub
+    crea.breakerland.fr: creatif
+    crea.horyzon.eu: creatif
+    dev.breakerland.fr: dev
     tcf.horyzon.eu: tcf
     xyloria.horyzon.eu: xyloria
     atonium.horyzon.eu: skyblock
@@ -56,43 +58,43 @@ online_mode: false
 forge_support: true
 disabled_commands: []
 servers:
-  hub:
+  $server_name_hub:
     address: $local_address:$server_port_hub
     motd: '&7───── Bienvenue sur &3&lHoryzon &7! ─────                       &2│ &6Breakerland &2| &6Herablex &2│'
     restricted: true
-  auth:
+  $server_name_auth:
     address: $local_address:$server_port_auth
     motd: '&7───── Bienvenue sur &3&lHoryzon &7! ─────                       &2│ &6Breakerland &2| &6Herablex &2│'
     restricted: true
-  survie:
+  $server_name_survie:
     address: $local_address:$server_port_survie
     motd: '&7───── Bienvenue sur &3&lBreakerland &7! ─────    &2│ &61.16 &2│ $ &2│ &cGrades &2│ &fLands &2│ &cMétiers &2│ &fPets &2│'
     restricted: false
-  creatif:
+  $server_name_creatif:
     address: $local_address:$server_port_creatif
     motd: '&7───── Bienvenue sur &3&lBreakerland &7! ─────    &2│ &61.16 &2│ $ &2│ &cCreatif &2│ &fPlots &2│ &cWorldEdit &2│ &fArmorstand &2│'
     restricted: false
-  event:
+  $server_name_event:
     address: $local_address:$server_port_event
     motd: '&7──── Bienvenue sur &3&lBreakerland Event &7! ────'
     restricted: false
-  archi:
+  $server_name_archi:
     address: $local_address:$server_port_archi
     motd: '&7───── Bienvenue sur &3&lBreakerland &7! ─────    &2│ &61.16 &2│ $ &2│ &cGrades &2│ &fLands &2│ &cMétiers &2│ &fPets &2│'
     restricted: true
-  dev:
+  $server_name_dev:
     address: $local_address:$server_port_dev
     motd: '&7──── Bienvenue sur &3&lBreakerland Dev &7! ────'
     restricted: true
-  tcf:
+  $server_name_tcf:
     address: $remote_address_02:$server_port_tcf
     motd: '&7──── Bienvenue sur &3&lHoryzon TCF &7! ────'
     restricted: true
-  skyblock:
+  $server_name_skyblock:
     address: $remote_address_02:$server_port_skyblock
     motd: '&7──── Bienvenue sur &3&lAtonium &7! ────'
     restricted: false
-  xyloria:
+  $server_name_xyloria:
     address: $remote_address_02:$server_port_xyloria
     motd: '&7──── Bienvenue sur &3&lXyloria &7! ────'
     restricted: true
