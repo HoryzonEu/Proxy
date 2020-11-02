@@ -8,7 +8,6 @@
 |   BungeeChatFilter     |           1.8         | https://www.spigotmc.org/resources/bungeechatfilter.20596/ |
 |   BungeeTabListPlus    |          3.4.0        | https://www.spigotmc.org/resources/bungeetablistplus.313/ |
 |   Floodgate-bungee     |           1.0         | https://github.com/GeyserMC/Geyser/wiki/Floodgate |
-|       ForcedMotd       |          0.0.1        | https://www.spigotmc.org/resources/forcedmotd.685/ |
 |        Geyser          |           1.0         | https://ci.nukkitx.com/job/GeyserMC/job/Geyser/job/master/ |
 |   LuckPerms-Bungee     |          5.2.4        | https://ci.lucko.me/job/LuckPerms/ |
 |       NuVotifier       |          2.7.1        | https://www.spigotmc.org/resources/nuvotifier.13449/ |
