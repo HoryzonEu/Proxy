@@ -1,6 +1,6 @@
 |        Plugins         |        Versions       |                                                Links                                               |
 | :--------------------: | :-------------------: | :------------------------------------------------------------------------------------------------: |
-|        AntiBot         |          0.6.4        | https://www.spigotmc.org/resources/2ls-antibot-the-ultimate-antibot-plugin.62847/ |
+|        AntiBot         |          0.6.7        | https://www.spigotmc.org/resources/2ls-antibot-the-ultimate-antibot-plugin.62847/ |
 |        AntiVPN         |         5.11.37       | https://www.spigotmc.org/resources/anti-vpn-bungee.58716/ |
 |     AutoReconnect      |           1.6         | https://www.spigotmc.org/resources/autoreconnect-bungeecord-reconnect.62729/ |
 |    BungeeAdminTool     |          1.4.4        | https://www.spigotmc.org/resources/bungee-admin-tools-basics-edition.444/ |
