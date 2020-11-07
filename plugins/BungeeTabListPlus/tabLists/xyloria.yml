@@ -9,9 +9,7 @@ showTo: ${viewer server} = "xyloria"
 priority: 0
 
 playerSets:
-  all_players: # A player set containing all players
-    filter: "true"
-    hiddenPlayers: "VISIBLE" # Hidden players show up on the tab list, avoids glitches
+  all_players: ${player server} != "auth"
 
 # A simple header and footer
 showHeaderFooter: true
