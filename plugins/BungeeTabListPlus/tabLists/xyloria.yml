@@ -3,66 +3,7 @@
 # Custom placeholders are a powerful mechanism to add more dynamic content
 # to the tab list.
 # See https://github.com/CodeCrafter47/BungeeTabListPlus/wiki/CustomPlaceholders
-customPlaceholders:
-  # Defines the ${afk_tag} placeholder which is used to add "|away"
-  # to the players name if he is afk.
-  afk_tag:
-    !conditional
-    condition: ${player essentials_afk}
-    true: "&4&lAFK"
-    false: ""
-  other_server_prefix:
-    !conditional
-    condition: '${viewer server} == ${player server}'
-    true: ''
-    false: '&7'
-  viewer_colored_ping0:
-    !conditional
-    condition: "${viewer ping} < 50"
-    true: "&a${viewer ping}"
-    false: "&e${viewer ping}"
-  viewer_colored_ping:
-    !conditional
-    condition: "${viewer ping} < 150"
-    true: ${viewer_colored_ping0}
-    false: "&c${viewer ping}"
-  viewer_colored_tps1:
-    !conditional
-    condition: "${viewer server tps} > 18"
-    true: "&a${viewer server tps 1.0}"
-    false: "&e${viewer server tps 1.0}"
-  viewer_colored_tps0:
-    !conditional
-    condition: "${viewer server tps} > 12"
-    true: ${viewer_colored_tps1}
-    false: "&c${viewer server tps 1.0}"
-  viewer_colored_tps:
-    !conditional
-    condition: "${viewer server tps} > 20"
-    true: "&a20"
-    false: "${viewer_colored_tps0}"
-  donation_bar:
-    !progress_bar
-    value: 10
-    maxValue: 65
-    style: largediv
-    length: 13
-    textCenter: "${progress_value}€"
-    colorCurrent: "&8"
-  server_display_name:
-    !switch
-    parameters: 1
-    expression: "${%0}"
-    replacements:
-      "creatif": "Créatif"
-      "survie": "Survie"
-      "archi": "Architecte"
-      "hub": "Lobby"
-      "dev": "Développement"
-      "event": "Event"
-      "skyblock": "Skyblock"
-      "xyloria": "Xyloria"
-    defaultReplacement: "${%0}"
+customPlaceholders: {}
 
 showTo: ${viewer server} = "xyloria"
 priority: 0
