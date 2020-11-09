@@ -12,6 +12,7 @@
 |   LuckPerms-Bungee     |          5.2.4        | https://ci.lucko.me/job/LuckPerms/ |
 |     MarriageMaster     |          2.2.8        | https://www.spigotmc.org/resources/marriage-master-mc-1-7-1-16.19273/ |
 |       NuVotifier       |          2.7.1        | https://www.spigotmc.org/resources/nuvotifier.13449/ |
+|     PCGF_PluginLib     |          1.0.30       | https://ci.pcgamingfreaks.at/job/PluginLib/ |
 |   PremiumConnector     |          2.2.1        | https://www.spigotmc.org/resources/premiumconnector-bungeecord.20957/ |
 |      RedirectPlus      |          2.8.0        | https://www.spigotmc.org/resources/redirect-plus.51975/ |
 |      VotingPlugin      |           1.0         | https://www.spigotmc.org/resources/votingplugin.15358/ |
