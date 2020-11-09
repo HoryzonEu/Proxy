@@ -98,3 +98,7 @@ servers:
     address: $remote_address_02:$server_port_xyloria
     motd: '&7──── Bienvenue sur &3&lXyloria &7! ────'
     restricted: true
+  zircania:
+    address: $local_address:$server_port_zircania
+    motd: '&7──── Bienvenue sur &3&lZircania &7! ────'
+    restricted: false
