@@ -62,12 +62,26 @@ customPlaceholders:
       "creatif": "Créatif"
       "survie": "Survie"
       "archi": "Architecte"
-      "hub": "Lobby"
+      "hub": "Hub"
       "dev": "Développement"
       "event": "Event"
       "skyblock": "Skyblock"
       "xyloria": "Xyloria"
     defaultReplacement: "${%0}"
+  server_slot_max:
+    !switch
+    parameters: 1
+    expression: "${%0}"
+    replacements:
+      "creatif": "20"
+      "survie": "20"
+      "archi": "10"
+      "hub": "50"
+      "dev": "20"
+      "event": "20"
+      "skyblock": "20"
+      "xyloria": "20"
+    defaultReplacement: "15"
 
 # Disables the custom tab list for players in spectators mode.
 # As a result those players will see the vanilla tab list of the server.

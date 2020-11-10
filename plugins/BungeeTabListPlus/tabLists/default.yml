@@ -1,44 +1,45 @@
-
-
 # Custom placeholders are a powerful mechanism to add more dynamic content
 # to the tab list.
 # See https://github.com/CodeCrafter47/BungeeTabListPlus/wiki/CustomPlaceholders
 customPlaceholders: {}
 
 showTo: "all"
-priority: 0
+priority: 1
 
-playerSets:
-  all_players: ${player server} != "auth"
-
-# A simple header and footer
 showHeaderFooter: true
-# header:
-  # - "&4&l&nBreakerLand"
 header:
 - |-
-  &7&l&m------&7&l[ &6&lBreakerland &7&l]&m------
+  &7&l&m------&7&l[  &6&lAtonium  &7&l]&m------
   &7En ligne: &e${playerset:all_players size}&7/50
   &7Ping: ${viewer_colored_ping}&7ms | TPS: ${viewer_colored_tps}&7/20
-headerAnimationUpdateInterval: 0.2
 footer: # The footer text:
 - |-
   &7Boost donation:
   &r${donation_bar}
   &7&l&m------&7&l[ &6&l${server_display_name viewer server} &7&l]&m------
-footerAnimationUpdateInterval: 0.5 # Ignore this, there's no animation
 
-# We want a dynamic size tab list
-type: DYNAMIC_SIZE
+playerSets:
+  all_players: ${player server} != "auth"
 
-# Below are the options specific to the dynamic size tab list
+type: FIXED_SIZE
 
-# Here you can configure which players to display by specifying a player set.
-# For this example we are using the `all_players` player set created above.
-playerSet: all_players
+size: 48
 
-# Here the order of the players can be configured.
-playerOrder: "vault_primary_group_weight asc"
+defaultIcon: colors/dark_gray.png
+defaultPing: 1000
 
-# This option controls the format of the players names.
-playerComponent: "${other_server_prefix}${player display_name} ${afk_tag}"
+components:
+- !players_by_server
+  playerSet: all_players
+  playerOrder: "vault_primary_group_weight asc"
+  serverHeader:
+  - {text: "&b&l>&3 &e&n${server_display_name server}", right: "[${server_player_count}/${server_slot_max}]", icon: "colors/yellow.png", ping: 0}
+  -
+  -
+  serverSeparator:
+  -
+  -
+  -
+  showServers: NON_EMPTY
+  playerComponent: {text: "${other_server_prefix}${player name}", right: "${afk_tag}"}
+  morePlayersComponent: "... ${other_count} autres"
