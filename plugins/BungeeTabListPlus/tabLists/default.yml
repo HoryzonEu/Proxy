@@ -33,7 +33,7 @@ components:
   playerSet: all_players
   playerOrder: "vault_primary_group_weight asc"
   serverHeader:
-  - {text: "&b&l>&3 &e&n${server_display_name server}", right: "[${server_player_count}/${server_slot_max}]", icon: "colors/yellow.png", ping: 0}
+  - {text: "&l>&3 &e&n${server_display_name server}", right: "[${server_player_count}/${server_slot_max server}]", icon: "colors/yellow.png", ping: 0}
   -
   -
   serverSeparator:
