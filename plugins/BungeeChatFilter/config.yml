@@ -75,65 +75,10 @@ rules:
         actions:
             lower: true
 
-#Removes magic, bold and italics from the players chat when they dont have the bungeefilter.antiformatbypass permission.
-    AntiFormatText:
-        regex: '&[k-o]'
-        permission: bungeefilter.antiformatbypass
-        actions:
-            remove: true
-            message: '&cLe formatage en chat est interdit'
-
-
-#Removes color from the chat unless the player has the bungeefilter.colorbypass permission
-    AntiColorText:
-        regex: "&[0-9 a-f]"
-        permission: bungeefilter.colorbypass
-        actions:
-            remove: true
-            message: '&cLa couleur en chat est reservé aux membres &6Premium'
-
 #Assumes all IP addresses are advertising and all URLs that do not include this server's name are advertising
     AntiAdvertising:
         regex: (^.*([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}).*$)|(^.*((mc|play)\.(.*)\.(com|net))|((.+)\.(.*(mine|craft).*)\.(com|net)).*$)
-        ignores: (^.*breakerland.fr)
+        ignores: (^.*(breakerland.fr|horyzon.eu))
         actions:
             kick: '&cLa publicité est interdite.'
-            deny: true
-
-    plus_one:
-        regex: (^\+1$)
-        permission: "!bungeefilter.plus_one"
-        actions:
-            pcommand: server event
-
-#Shortcut for website URL can use either /url or /website
-    site:
-        regex: (^/(url|website|site)$)
-        actions:
-            message: "&l&6[Site internet] &6www.breakerland.fr"
-            deny: true
-    plugins:
-        regex: (^/(pl|plugins)$)
-        actions:
-            message: "&7Tu souhaites connaître la liste de nos plugins ? Regardes plutot sur https://github.com/Breakerland/Breakerland afin de contribuer à faire évoluer le serveur !"
-            deny: true
-    wiki:
-        regex: (^/wiki$)
-        actions:
-            message: "&l&6[Wiki] &6www.breakerland.fr/wiki"
-            deny: true
-
-#Shortcut for website URL can use either /url or /website
-    start:
-        regex: (^/start$)
-        actions:
-            alert: "&f[&6Event&f] &6Faites &l+1 &6pour rejoindre l'event!"
-            scommand: "lpb group default permission settemp bungeefilter.plus_one 5m"
-            deny: true
-
-#Shortcut for website URL can use either /url or /website
-    map:
-        regex: (^/(map|dynmap)$)
-        actions:
-            message: "&l&6[Dynmap] &6https://map.breakerland.fr"
             deny: true
