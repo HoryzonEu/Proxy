@@ -9,7 +9,7 @@ priority: 1
 showHeaderFooter: true
 header:
 - |-
-  &7&l&m------&7&l[  &6&lAtonium  &7&l]&m------
+  &7&l&m------&7&l[  &6&l${server_display_name viewer server}  &7&l]&m------
   &7En ligne: &e${playerset:all_players size}&7/50
   &7Ping: ${viewer_colored_ping}&7ms | TPS: ${viewer_colored_tps}&7/20
 footer: # The footer text:
