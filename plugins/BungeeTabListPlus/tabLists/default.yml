@@ -41,5 +41,5 @@ components:
   -
   -
   showServers: NON_EMPTY
-  playerComponent: {text: "${other_server_prefix}${player name}", right: "${afk_tag}"}
+  playerComponent: {text: "${other_server_prefix}${player display_name}", right: "${afk_tag}", longText: CROP}
   morePlayersComponent: "... ${other_count} autres"
