@@ -62,7 +62,7 @@ servers:
   $server_name_hub:
     address: $local_address:$server_port_hub
     motd: '&7───── Bienvenue sur &3&lHoryzon &7! ─────                       &2│ &6Breakerland &2| &6Herablex &2│'
-    restricted: true
+    restricted: false
   $server_name_auth:
     address: $local_address:$server_port_auth
     motd: '&7───── Bienvenue sur &3&lHoryzon &7! ─────                       &2│ &6Breakerland &2| &6Herablex &2│'
@@ -82,15 +82,15 @@ servers:
   $server_name_archi:
     address: $local_address:$server_port_archi
     motd: '&7───── Bienvenue sur &3&lBreakerland &7! ─────    &2│ &61.16 &2│ $ &2│ &cGrades &2│ &fLands &2│ &cMétiers &2│ &fPets &2│'
-    restricted: true
+    restricted: false
   $server_name_dev:
     address: $local_address:$server_port_dev
     motd: '&7──── Bienvenue sur &3&lBreakerland Dev &7! ────'
-    restricted: true
+    restricted: false
   $server_name_tcf:
     address: $remote_address_02:$server_port_tcf
     motd: '&7──── Bienvenue sur &3&lHoryzon TCF &7! ────'
-    restricted: true
+    restricted: false
   $server_name_skyblock:
     address: $remote_address_02:$server_port_skyblock
     motd: '&7──── Bienvenue sur &3&lAtonium &7! ────'
@@ -98,7 +98,7 @@ servers:
   $server_name_xyloria:
     address: $remote_address_02:$server_port_xyloria
     motd: '&7──── Bienvenue sur &3&lXyloria &7! ────'
-    restricted: true
+    restricted: false
   zircania:
     address: $local_address:$server_port_zircania
     motd: '&7──── Bienvenue sur &3&lZircania &7! ────'
