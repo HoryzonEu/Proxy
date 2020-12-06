@@ -84,6 +84,6 @@ servers:
     motd: '&7──── Bienvenue sur &3&lBreakerland Dev &7! ────'
     restricted: false
   $server_name_skyblock:
-    address: $local_address_02:$server_port_skyblock
+    address: $local_address:$server_port_skyblock
     motd: '&7──── Bienvenue sur &3&lAtonium &7! ────'
     restricted: false
