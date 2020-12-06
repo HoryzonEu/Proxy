@@ -11,12 +11,8 @@ listeners:
     crea.breakerland.fr: creatif
     crea.horyzon.eu: creatif
     dev.breakerland.fr: dev
-    tcf.horyzon.eu: tcf
-    xyloria.horyzon.eu: xyloria
-    atonium.horyzon.eu: skyblock
-    zircania.horyzon.eu: zircania
-    sky.horyzon.eu: skyblock
-    sky.breakerland.fr: skyblock
+    sky.horyzon.eu: $server_name_skyblock
+    sky.breakerland.fr: $server_name_skyblock
     survie.breakerland.fr: survie
   host: $public_address:$proxy_port
   max_players: 60
@@ -87,19 +83,7 @@ servers:
     address: $local_address:$server_port_dev
     motd: '&7──── Bienvenue sur &3&lBreakerland Dev &7! ────'
     restricted: false
-  $server_name_tcf:
-    address: $remote_address_02:$server_port_tcf
-    motd: '&7──── Bienvenue sur &3&lHoryzon TCF &7! ────'
-    restricted: false
   $server_name_skyblock:
-    address: $remote_address_02:$server_port_skyblock
+    address: $local_address_02:$server_port_skyblock
     motd: '&7──── Bienvenue sur &3&lAtonium &7! ────'
-    restricted: false
-  $server_name_xyloria:
-    address: $remote_address_02:$server_port_xyloria
-    motd: '&7──── Bienvenue sur &3&lXyloria &7! ────'
-    restricted: false
-  zircania:
-    address: $local_address:$server_port_zircania
-    motd: '&7──── Bienvenue sur &3&lZircania &7! ────'
     restricted: false
