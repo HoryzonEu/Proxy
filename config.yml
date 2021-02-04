@@ -3,24 +3,24 @@ listeners:
 - bind_local_address: true
   force_default_server: false
   forced_hosts:
-    archi.breakerland.fr: archi
-    archi.horyzon.eu: archi
-    breakerland.fr: survie
-    mc.breakerland.fr: survie
-    mc.horyzon.eu: hub
-    crea.breakerland.fr: creatif
-    crea.horyzon.eu: creatif
-    dev.breakerland.fr: dev
-    sky.horyzon.eu: $server_name_skyblock
-    sky.breakerland.fr: $server_name_skyblock
-    survie.breakerland.fr: survie
+    archi.breakerland.fr: $server_name_archi
+    archi.horyzon.eu: $server_name_archi
+    breakerland.fr: $server_name_survie
+    mc.breakerland.fr: $server_name_survie
+    survie.breakerland.fr: $server_name_survie
+    survie.horyzon.eu: $server_name_survie
+    mc.horyzon.eu: $server_name_hub
+    crea.breakerland.fr: $server_name_creatif
+    crea.horyzon.eu: $server_name_creatif
+    dev.breakerland.fr: $server_name_dev
+    campfire.horyzon.eu: $server_name_campfire
   host: $public_address:$proxy_port
   max_players: 60
   motd: '&7───── Bienvenue sur &3&lBreakerland &7! ─────    &2│ &61.16 &2│ $ &2│ &cGrades &2│ &fLands &2│ &cMétiers &2│ &fPets &2│'
   ping_passthrough: false
   priorities:
-  - survie
-  - creatif
+  - $server_name_survie
+  - $server_name_creatif
   proxy_protocol: false
   query_enabled: true
   query_port: $proxy_query
@@ -83,7 +83,7 @@ servers:
     address: $local_address:$server_port_dev
     motd: '&7──── Bienvenue sur &3&lBreakerland Dev &7! ────'
     restricted: false
-  $server_name_skyblock:
-    address: $local_address:$server_port_skyblock
-    motd: '&7──── Bienvenue sur &3&lBreakerland Sky &7! ────'
+  $server_name_campfire:
+    address: $local_address:$server_port_campfire
+    motd: '&7──── Bienvenue sur &3&lFeu de camp &7! ────'
     restricted: false
