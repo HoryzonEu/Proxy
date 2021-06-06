@@ -15,5 +15,7 @@
 |     PCGF_PluginLib     |          1.0.30       | https://ci.pcgamingfreaks.at/job/PluginLib/ |
 |   PremiumConnector     |          2.3.1        | https://www.spigotmc.org/resources/premiumconnector-bungeecord.20957/ |
 |      RedirectPlus      |          2.8.0        | https://www.spigotmc.org/resources/redirect-plus.51975/ |
+|       ViaBackwards     |          4.0.0        | https://www.spigotmc.org/resources/viabackwards.27448/ |
+|       ViaVersion       |          4.0.0        | https://www.spigotmc.org/resources/viaversion.19254/ |
 |      VotingPlugin      |           1.0         | https://www.spigotmc.org/resources/votingplugin.15358/ |
 |     Yamler-Bungee      |          2.4.0        | https://www.spigotmc.org/resources/yamler.315/ |
