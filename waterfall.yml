@@ -1,6 +1,6 @@
 throttling:
   tab_complete: 1000
-game_version: 1.12-1.16
+game_version: 1.12-1.17
 disable_tab_list_rewrite: false
 disable_modern_tab_limiter: true
 use_netty_dns_resolver: true
