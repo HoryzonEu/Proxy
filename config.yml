@@ -96,5 +96,5 @@ servers:
     restricted: false
   $server_name_snapshot:
     address: $local_address:$server_port_snapshot
-    motd: '&7──── Bienvenue sur &3&lHoryzon &7! ────    &2│ &61.17-rc1 &2│ $ &2│ &c100% Vanilla &2│ &fCaves & Cliffs &2│'
+    motd: '&7────    Bienvenue sur &3&lHoryzon &7!    ────    &2│ &61.17-rc1 &2│ $ &2│ &c100% Vanilla &2│ &fCaves & Cliffs &2│'
     restricted: false
