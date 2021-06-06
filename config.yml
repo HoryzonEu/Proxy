@@ -15,6 +15,8 @@ listeners:
     dev.breakerland.fr: $server_name_dev
     campfire.horyzon.eu: $server_name_campfire
     orion.horyzon.eu: $server_name_orion
+    vanilla.horyzon.eu: $server_name_snapshot
+    snapshot.horyzon.eu: $server_name_snapshot
   host: $public_address:$proxy_port
   max_players: 60
   motd: '&7───── Bienvenue sur &3&lBreakerland &7! ─────    &2│ &61.16 &2│ $ &2│ &cGrades &2│ &fLands &2│ &cMétiers &2│ &fPets &2│'
@@ -91,4 +93,8 @@ servers:
   $server_name_orion:
     address: $local_address:$server_port_orion
     motd: '&7──── Bienvenue sur &3&lOrion &7! ────'
+    restricted: false
+  $server_name_snapshot:
+    address: $local_address:$server_port_snapshot
+    motd: '&7──── Bienvenue sur &3&lHoryzon &7! ────    &2│ &61.17-rc1 &2│ $ &2│ &c100% Vanilla &2│ &fCaves & Cliffs &2│'
     restricted: false
