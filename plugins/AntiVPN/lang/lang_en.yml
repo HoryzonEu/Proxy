@@ -1,10 +1,11 @@
 acf-minecraft:
   multiple_players_match: "en"
-  version: 1.0
+  version: 1.2
 
 description:
   reload: "Reloads the plugin."
   import: "Imports data from one storage engine to another."
+  kick: "Kicks a player for VPN or MCLeaks usage using the plugin configuration."
   check: "Check an IP or player using the default system. This will return exactly the same value as any other API call."
   score: "Scores a particular source based on a pre-made list of known good and bad IPs. Note that this forces a check so will use credits every time it's run."
   test: "Test an IP through the various (enabled) services. Note that this forces a check so will use credits every time it's run."
@@ -13,10 +14,10 @@ general:
   header: "<c2>[</c2><c3>Anti-VPN</c3><c2>]</c2> "
   enabled: "<c4>Enabled</c4>"
   disabled: "<c5>Disabled</c5>"
-  load: "<c2>[</c2><c3>Version</c3> {version}<c2>] [</c2>{commands} <c6>Commands</c6><c2>] [</c2>{events} <c7>Events</c7><c2>] [</c2>{tasks} <c8>Tasks</c8><c2>]</c2>"
+  load: "<c2>[</c2><c3>Version</c3> {version}<c2>] [</c2><c3>API Version</c3> {apiversion}<c2>] [</c2>{commands} <c6>Commands</c6><c2>] [</c2>{events} <c7>Events</c7><c2>] [</c2>{tasks} <c8>Tasks</c8><c2>]</c2>"
   hook_enable: "<c4>Enabling support for</c4> {plugin}"
   hook_disable: "{plugin} <c2>was not found. Support for it has been disabled.</c2>"
-  update: "(Bungee) <c3>has an</c3> <c4>update</c4> <c3>available!</c3> New version: <c2>{version}</c2>"
+  update: "<c3>has an</c3> <c4>update</c4> <c3>available!</c3> New version: <c2>{version}</c2>"
 
 error:
   internal: "Internal error"
@@ -27,10 +28,14 @@ import:
   no_slave: "The specified slave storage was not found."
   ips: "<c2>Importing IPs..</c2> <c8>[</c8><c2>ID:</c2> <c3>{id}</c3><c8>]</c8>"
   players: "<c2>Importing players..</c2> <c8>[</c8><c2>ID:</c2> <c3>{id}</c3><c8>]</c8>"
-  vpns: "<c2>Importing VPN data..</c2> <c8>[</c8><c2>ID:</c2> <c3>{id}</c3><c8>]</c8>"
-  mcleaks: "<c2>Importing MCLeaks data..</c2> <c8>[</c8><c2>ID:</c2> <c3>{id}</c3><c8>]</c8>"
   begin: "<c2>Importing data, please wait..</c2>"
   end: "<c4>Data successfully imported!</c4>"
+
+kick:
+  api_mode: "The plugin is in API mode, and no actions have been performed."
+  end_vpn: "<c4>Player</c4> {player} <c4>has been kicked for VPN usage, and/or all necessary commands have been run.</c4>"
+  end_mcleaks: "<c4>Player</c4> {player} <c4>has been kicked for MCLeaks usage, and/or and all necessary commands have been run.</c4>"
+  no_player: "The specified player was not online."
 
 check:
   begin: "<c2>Checking</c2> {type}<c2>, please wait..</c2>"

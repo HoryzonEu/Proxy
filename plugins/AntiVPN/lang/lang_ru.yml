@@ -1,0 +1,64 @@
+acf-minecraft:
+  multiple_players_match: "ru"
+  version: 1.1
+
+description:
+  reload: "Перезагрузка плагина."
+  import: "Импортирует данные из одного хранилища в другой."
+  kick: "(Plz translate) Kicks a player for VPN or MCLeaks usage using the plugin configuration."
+  check: "Проверьте IP-адрес или плеер, используя систему по умолчанию. Это вернет точно такое же значение, как и любой другой вызов API."
+  score: "Оценка конкретного источника на основе заранее составленного списка известных хороших и плохих IP-адресов. Обратите внимание, что это заставляет проверку использовать титры каждый раз, когда она выполняется."
+  test: "Проверьте IP-адрес с помощью различных (включенных) служб. Обратите внимание, что это заставляет проверять, так что будет использовать титры каждый раз, когда он запускается."
+
+general:
+  header: "<c2>[</c2><c3>Anti-VPN</c3><c2>]</c2> "
+  enabled: "<c4>Включен</c4>"
+  disabled: "<c5>Выключен</c5>"
+  load: "<c2>[</c2><c3>Версия</c3> {version}<c2>] [</c2><c3>API Версия</c3> {apiversion}<c2>] [</c2>{commands} <c6>Команды</c6><c2>] [</c2>{events} <c7>Ивенты</c7><c2>] [</c2>{tasks} <c8>Цель</c8><c2>]</c2>"
+  hook_enable: "<c4>Включение поддержки</c4> {plugin}"
+  hook_disable: "{plugin} <c2>не был найден. Поддержка для него была отключена.</c2>"
+  update: "(Bukkit) <c3>Доступно</c3> <c4>обновление</c4> <c3>Обновитесь..</c3> Новая версия: <c2>{version}</c2>"
+
+error:
+  internal: "Внутренняя ошибка/Internal error"
+
+import:
+  same_storage: "(Plz translate) The specified master and slave are the same!"
+  no_master: "(Plz translate) The specified master storage was not found."
+  no_slave: "(Plz translate) The specified slave storage was not found."
+  ips: "(Plz translate) <c2>Importing IPs..</c2> <c8>[</c8><c2>ID:</c2> <c3>{id}</c3><c8>]</c8>"
+  players: "(Plz translate) <c2>Importing players..</c2> <c8>[</c8><c2>ID:</c2> <c3>{id}</c3><c8>]</c8>"
+  begin: "(Plz translate) <c2>Importing data, please wait..</c2>"
+  end: "(Plz translate) <c4>Data successfully imported!</c4>"
+
+kick:
+  api_mode: "(Plz translate) The plugin is in API mode, and no actions have been performed."
+  end_vpn: "(Plz translate) <c4>Player</c4> {player} <c4>has been kicked for VPN usage, and/or all necessary commands have been run.</c4>"
+  end_mcleaks: "(Plz translate) <c4>Player</c4> {player} <c4>has been kicked for MCLeaks usage, and/or and all necessary commands have been run.</c4>"
+  no_player: "(Plz translate) The specified player was not online."
+
+check:
+  begin: "<c2>Проверка</c2> {type}<c2>, пожалуйста подождите...</c2>"
+  vpn_detected: "<c5>VPN/proxy обнаруженно</c5>"
+  no_vpn_detected: "<c4>VPN/proxy не обнаруженно</c4>"
+  mcleaks_detected: "<c5>Обнаружена учетная запись MCLeaks</c5>"
+  no_mcleaks_detected: "<c4>Учетная запись MCLeaks не обнаружена</c4>"
+
+score:
+  begin: "(Plz translate) <c2>Scoring</c2> {source}<c2>, please wait..</c2>"
+  type: "(Plz translate) <c2>Scoring against</c2> {type}<c2>..</c2>"
+  sleep: "(Plz translate) <c2>Sleeping for one minute..</c2>"
+  error: "(Plz translate) [{source}] {type} <c5>error</c5> {percent}%"
+  score: "(Plz translate) [{source}] {type} <c2>score</c2> {percent}%"
+  end: "(Plz translate) <c4>Scoring for</c4> {source} <c4>complete!</c4>"
+
+test:
+  begin: "(Plz translate) <c2>Testing with</c2> {ip}<c2>, please wait..</c2>"
+  error: "(Plz translate) [{source}] <c2>error</c2>"
+  vpn_detected: "(Plz translate) [{source}] <c5>VPN/proxy detected</c5>"
+  no_vpn_detected: "(Plz translate) [{source}] <c4>No VPN/proxy detected</c4>"
+  end: "(Plz translate) <c4>Test for</c4> {ip} <c4>complete!</c4>"
+
+reload:
+  begin: "<c2>Перезагрузка, пожалуйста, подождите..</c2>"
+  end: "<c4>Конфигурация перезагружена!</c4>"

@@ -1,10 +1,11 @@
 acf-minecraft:
   multiple_players_match: "fr"
-  version: 1.0
+  version: 1.3
 
 description:
   reload: "Recharge le plugin."
   import: "Importe des données d'un moteur de stockage à un autre."
+  kick: "Ejecte un joueur pour un usage d'un VPN ou MCLeaks en utilisant la configuration du plugin."
   check: "Vérifiez une adresse IP ou un lecteur en utilisant le système par défaut. Cela renverra exactement la même valeur que tout autre appel d'API."
   score: "Marque une source particulière sur la base d'une liste préétablie de bonnes et de mauvaises adresses IP connues. Notez que cela force une vérification et utilisera donc des crédits à chaque exécution."
   test: "Testez une adresse IP via les différents services (activés). Notez que cela force une vérification et utilisera donc des crédits à chaque exécution."
@@ -13,10 +14,10 @@ general:
   header: "<c2>[</c2><c3>Anti-VPN</c3><c2>]</c2> "
   enabled: "<c4>Activé</c4>"
   disabled: "<c5>Désactivé</c5>"
-  load: "<c2>[</c2><c3>Version</c3> {version}<c2>] [</c2>{commands} <c6>Commandes</c6><c2>] [</c2>{events} <c7>Événements</c7><c2>] [</c2>{tasks} <c8>Tâches</c8><c2>]</c2>"
+  load: "<c2>[</c2><c3>Version</c3> {version}<c2>] [</c2><c3>API Version</c3> {apiversion}<c2>] [</c2>{commands} <c6>Commandes</c6><c2>] [</c2>{events} <c7>Événements</c7><c2>] [</c2>{tasks} <c8>Tâches</c8><c2>]</c2>"
   hook_enable: "<c4>Activation de la prise en charge de</c4> {plugin}"
   hook_disable: "{plugin} <c2>est introuvable. La prise en charge a été désactivée.</c2>"
-  update: "(Bungee) <c3>a une</c3> <c4>mise à jour</c4> <c3>disponible!</c3> Nouvelle version: <c2>{version}</c2>"
+  update: "<c3>a une</c3> <c4>mise à jour</c4> <c3>disponible!</c3> Nouvelle version: <c2>{version}</c2>"
 
 error:
   internal: "Erreur interne"
@@ -27,13 +28,17 @@ import:
   no_slave: "Le stockage esclave spécifié est introuvable."
   ips: "<c2>Importation d'adresses IP..</c2> <c8>[</c8><c2>ID:</c2> <c3>{id}</c3><c8>]</c8>"
   players: "<c2>Importation de joueurs..</c2> <c8>[</c8><c2>ID:</c2> <c3>{id}</c3><c8>]</c8>"
-  vpns: "<c2>Importation de données VPN..</c2> <c8>[</c8><c2>ID:</c2> <c3>{id}</c3><c8>]</c8>"
-  mcleaks: "<c2>Importation de données MCLeaks..</c2> <c8>[</c8><c2>ID:</c2> <c3>{id}</c3><c8>]</c8>"
   begin: "<c2>Importation de données, veuillez patienter..</c2>"
   end: "<c4>Les données ont été importées avec succès!</c4>"
 
+kick:
+  api_mode: "Le plugin est en mode API, et aucune action a été effectuée."
+  end_vpn: "<c4>Le joueur</c4> {player} <c4>a été éjecté pour une utilisation d'un VPN, et/ou toutes les commandes ont été exécutées.</c4>"
+  end_mcleaks: "<c4>Le joueur</c4> {player} <c4>a été éjecté pour une utilisation MCLeaks, et/ou toutes les commandes nécessaires ont été exécutées.</c4>"
+  no_player: "Le joueur spécifié n'est pas connecté."
+
 check:
-  begin: "<c2>Vérification de</c2> {type}<c2>, veuillez patienter..</c2>"
+  begin: "<c2>Vérification de</c2> {type}<c2>, veuillez patienter.</c2>"
   vpn_detected: "<c5>VPN/proxy détecté</c5>"
   no_vpn_detected: "<c4>Aucun VPN/proxy détecté</c4>"
   mcleaks_detected: "<c5>Compte MCLeaks détecté</c5>"
