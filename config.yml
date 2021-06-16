@@ -95,6 +95,6 @@ servers:
     motd: '&7──── Bienvenue sur &3&lOrion &7! ────'
     restricted: false
   $server_name_vanilla:
-    address: $local_address:$server_name_vanilla
+    address: $local_address:$server_port_vanilla
     motd: '&7────    Bienvenue sur &3&lHoryzon &7!    ────    &2│ &61.17-rc1 &2│ $ &2│ &c100% Vanilla &2│ &fCaves & Cliffs &2│'
     restricted: false
