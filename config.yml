@@ -14,8 +14,6 @@ listeners:
     crea.breakerland.fr: $server_name_creatif
     crea.horyzon.eu: $server_name_creatif
     dev.breakerland.fr: $server_name_dev
-    campfire.horyzon.eu: $server_name_campfire
-    orion.horyzon.eu: $server_name_orion
     vanilla.horyzon.eu: $server_name_vanilla
   host: $public_address:$proxy_port
   max_players: 60
@@ -85,14 +83,6 @@ servers:
   $server_name_dev:
     address: $local_address:$server_port_dev
     motd: '&7──── Bienvenue sur &3&lBreakerland Dev &7! ────'
-    restricted: false
-  $server_name_campfire:
-    address: $local_address:$server_port_campfire
-    motd: '&7──── Bienvenue sur &3&lFeu de camp &7! ────'
-    restricted: false
-  $server_name_orion:
-    address: $local_address:$server_port_orion
-    motd: '&7──── Bienvenue sur &3&lOrion &7! ────'
     restricted: false
   $server_name_vanilla:
     address: $local_address:$server_port_vanilla
