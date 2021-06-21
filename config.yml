@@ -3,21 +3,23 @@ listeners:
 - bind_local_address: true
   force_default_server: false
   forced_hosts:
-    archi.breakerland.fr: $server_name_archi
-    archi.horyzon.eu: $server_name_archi
     breakerland.fr: $server_name_survie
     mc.breakerland.fr: $server_name_survie
     vanilla.breakerland.fr: $server_name_vanilla
     survie.breakerland.fr: $server_name_survie
-    survie.horyzon.eu: $server_name_survie
-    mc.horyzon.eu: $server_name_hub
     crea.breakerland.fr: $server_name_creatif
-    crea.horyzon.eu: $server_name_creatif
+    archi.breakerland.fr: $server_name_archi
     dev.breakerland.fr: $server_name_dev
+    mc.horyzon.eu: $server_name_hub
+    crea.horyzon.eu: $server_name_creatif
     vanilla.horyzon.eu: $server_name_vanilla
+    pvp.horyzon.eu: $server_name_pvp
+    archi.horyzon.eu: $server_name_archi
+    bk.horyzon.eu: $server_name_survie
+    breakerland.horyzon.eu: $server_name_survie
   host: $public_address:$proxy_port
   max_players: 60
-  motd: '&7───── Bienvenue sur &3&lBreakerland &7! ─────    &2│ &61.16 &2│ $ &2│ &cGrades &2│ &fLands &2│ &cMétiers &2│ &fPets &2│'
+  motd: '&7───── Bienvenue sur &3&lHoryzon &7! ─────    &2│ &61.17 &2│ $ &2│ &cGrades &2│ &fLands &2│ &cMétiers &2│ &fPets &2│'
   ping_passthrough: false
   priorities:
   - $server_name_survie
@@ -58,19 +60,19 @@ disabled_commands: []
 servers:
   $server_name_hub:
     address: $local_address:$server_port_hub
-    motd: '&7───── Bienvenue sur &3&lHoryzon &7! ─────                       &2│ &6Breakerland &2| &6Herablex &2│'
+    motd: '&7───── Bienvenue sur &3&lHoryzon &7! ─────                       &2│ &6Horyzon Network &2│'
     restricted: false
   $server_name_auth:
     address: $local_address:$server_port_auth
-    motd: '&7───── Bienvenue sur &3&lHoryzon &7! ─────                       &2│ &6Breakerland &2| &6Herablex &2│'
+    motd: '&7───── Bienvenue sur &3&lHoryzon &7! ─────                       &2│ &6Horyzon Network &2│'
     restricted: true
   $server_name_survie:
     address: $local_address:$server_port_survie
-    motd: '&7───── Bienvenue sur &3&lBreakerland &7! ─────    &2│ &61.16 &2│ $ &2│ &cGrades &2│ &fLands &2│ &cMétiers &2│ &fPets &2│'
+    motd: '&7───── Bienvenue sur &3&lBreakerland &7! ─────    &2│ &61.17 &2│ $ &2│ &cGrades &2│ &fLands &2│ &cMétiers &2│ &fPets &2│'
     restricted: false
   $server_name_creatif:
     address: $local_address:$server_port_creatif
-    motd: '&7───── Bienvenue sur &3&lBreakerland &7! ─────    &2│ &61.16 &2│ $ &2│ &cCreatif &2│ &fPlots &2│ &cWorldEdit &2│ &fArmorstand &2│'
+    motd: '&7───── Bienvenue sur &3&lBreakerland &7! ─────    &2│ &61.17 &2│ $ &2│ &cCreatif &2│ &fPlots &2│ &cWorldEdit &2│ &fArmorstand &2│'
     restricted: false
   $server_name_event:
     address: $local_address:$server_port_event
@@ -78,7 +80,7 @@ servers:
     restricted: false
   $server_name_archi:
     address: $local_address:$server_port_archi
-    motd: '&7───── Bienvenue sur &3&lBreakerland &7! ─────    &2│ &61.16 &2│ $ &2│ &cGrades &2│ &fLands &2│ &cMétiers &2│ &fPets &2│'
+    motd: '&7───── Bienvenue sur &3&lBreakerland &7! ─────    &2│ &61.17 &2│ $ &2│ &cGrades &2│ &fLands &2│ &cMétiers &2│ &fPets &2│'
     restricted: false
   $server_name_dev:
     address: $local_address:$server_port_dev
@@ -86,5 +88,9 @@ servers:
     restricted: false
   $server_name_vanilla:
     address: $local_address:$server_port_vanilla
-    motd: '&7────    Bienvenue sur &3&lHoryzon &7!    ────    &2│ &61.17-rc1 &2│ $ &2│ &c100% Vanilla &2│ &fCaves & Cliffs &2│'
+    motd: '&7────    Bienvenue sur &3&lHoryzon &7!    ────     &2│ &61.17 &2│ $ &2│ &c100% Vanilla &2│ &fCaves & Cliffs &2│'
+    restricted: false
+  $server_name_pvp:
+    address: $local_address:$server_port_pvp
+    motd: '&7────    Bienvenue sur &3&lHoryzon Pvp &7!    ──── &2│ &61.17 &2│ &fThe island &2│ &cPvp &2│'
     restricted: false
